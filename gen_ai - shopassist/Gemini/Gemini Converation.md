@@ -12,7 +12,7 @@ System is ready
     - Do you need heavy processing laptop
     - Do you need it for travel purposes, etc
 
-    Please note: I do not take inputs to talk to about any specific brand as I am suppose to be non-biased. 
+    Please note: I do not take inputs to talk to about any specific brand as I am not suppose to be biased. 
     Once I find a good recommendatio for you, then you can ask me about that laptop.
 
     Let's start!!!
