@@ -1,6 +1,5 @@
 
 gen_ai - shopassist/drive-download-20240717T084454Z-001/drive-download-20240717T084807Z-001/Session 2 - ShopAssistAI_Demonstration_Stage_2_Stage3_Stub.ipynb
-*.ipynb
 .DS_Store
 gen_ai - shopassist/.DS_Store
 gen_ai - shopassist/drive-download-20240717T084454Z-001/.DS_Store
@@ -9,8 +8,12 @@ gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssist Reading Mater
 gen_ai - shopassist/drive-download-20240717T084454Z-001/system_design.png
 gen_ai - shopassist/gemini_API_Key.txt
 gen_ai - shopassist/updated_laptop_data.csv
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
 gen_ai - shopassist/Gemini/gemini_API_Key.txt
+gen_ai - shopassist/.ipynb_checkpoints/Gemini-shopAssist-checkpoint.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/drive-download-20240717T084807Z-001/Session 1 - ShopAssistAI_Demonstration_Stage_1_Stub.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/Live Session - Starter Notebook/Session 1 - ShopAssistAI_Demonstration_Stage_1_Stub.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/Live Session - Starter Notebook/Session 2 - ShopAssistAI_Demonstration_Stage_2_Stage3_Stub.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/Session_2_ShopAssistAI_Demonstration_Stage_2_Stage3_Stub.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_Complete_v2.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_V1.ipynb
+gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_v2_Stage1.ipynb
