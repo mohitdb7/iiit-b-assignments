@@ -12,3 +12,5 @@ gen_ai - shopassist/updated_laptop_data.csv
 .DS_Store
 .DS_Store
 .DS_Store
+.DS_Store
+gen_ai - shopassist/Gemini/gemini_API_Key.txt
