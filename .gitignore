@@ -17,3 +17,8 @@ gen_ai - shopassist/drive-download-20240717T084454Z-001/Session_2_ShopAssistAI_D
 gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_Complete_v2.ipynb
 gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_V1.ipynb
 gen_ai - shopassist/drive-download-20240717T084454Z-001/ShopAssistAI_Demonstration_v2_Stage1.ipynb
+.DS_Store
+gen_ai - shopassist/Gemini/.ipynb_checkpoints/Gemini-shopAssist-checkpoint.ipynb
+gen_ai - shopassist/OpenAI/.ipynb_checkpoints/OpenAI-ShopAssist-checkpoint.ipynb
+gen_ai - shopassist/OpenAI/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+gen_ai - shopassist/OpenAI/OpenAIKey.txt
