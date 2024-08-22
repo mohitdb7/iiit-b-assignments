@@ -1,0 +1,27 @@
+## RAG steps
+- **Step 1:** Build the vector store: The first step is to build a vector store that can store documents along with metadata. A vector store is a database that stores embeddings of text data in a vector space. The documents are converted to raw text and then split into chunks. Each chunk is then represented as a vector using an embedding model. The vector store is then populated with these vectors.
+- **Step 2:** Embed the query and perform semantic search: The next step is to embed the user query into the same vector space as the documents in the vector store. This is done using an embedding model. Once the query is embedded, a semantic search is performed to find the closest embedding from the vector store. The entries with the highest semantic overlap with the query are retrieved.
+- **Step 3:** Pass the prompt with the query and the relevant documents to the LLM: The final step is to pass the prompt, which is a concatenation of the query and the retrieved documents, to the LLM. The LLM generates a response based on the context of the query, the system prompt and the relevant documents passed from the search layer. The retrieved documents serve as the knowledge bank and provide the necessary context for the query to the LLM, which helps it generate a more accurate and relevant response.
+
+### Embedding Layer
+You are already familiar with the embedding layer, as it was covered in the previous sessions on semantic search. The embedding layer is typically the first layer of a RAG model, and it typically contains an embedding model that is trained on a massive data set of text and code. This data set is used to learn the relationships between words and phrases and to create embeddings that represent these relationships. The embedding layer is an important part of RAG models because it allows your system to understand the meaning of the text that it is processing and understand its semantic relationship to the query. The embedding layer generates embeddings for your text corpus and allows the RAG model to understand the meaning of the query and to generate a relevant and informative response. This is essential for a variety of tasks, such as question answering, summarisation and machine translation.
+
+### Search and Rank Layer
+The next layer is the search and rank or the re-rank layer. The search and re-rank layer is a crucial component that is responsible for retrieving the relevant information from an external knowledge base, ranking it based on its relevance to the input query and presenting it to the generation layer for further processing. The search and re-rank layer is an essential component of RAG, as it ensures that the retrieved text is accurate, relevant and contextually appropriate. The search and re-rank layer typically consists of two components:
+A search component that uses various techniques to retrieve relevant documents from the knowledge base
+A re-rank component that uses a variety of techniques to re-rank the retrieved documents to produce the most relevant results
+
+The search component typically uses a technique called semantic similarity. As discussed in the previous session, semantic similarity is a measure of how similar two pieces of text are in terms of their meaning. The search component uses semantic similarity to retrieve documents from a knowledge base that are relevant to the user's query. 
+
+The re-rank component of the search typically uses a variety of techniques to re-rank the retrieved documents. These techniques can include the following:
+- **Ranking by relevance:** The re-rank component can rank the retrieved documents based on how relevant they are to the user's query.
+- **Ranking by popularity:** The re-rank component can rank the retrieved documents based on how popular they are, such as by measuring the number of times they have been viewed or shared.
+- **Ranking by freshness:** The re-rank component can rank the retrieved documents based on how recent they are, such as by measuring the date on which they were published.
+
+The search and re-rank layer is an important part of RAG models because it allows the model to retrieve and re-rank relevant documents from a knowledge base. This is essential for numerous tasks, such as question answering, summarisation and machine translation. The search and re-rank layer is a powerful tool that can be used to improve the performance of a variety of AI tasks. It is an essential part of RAG models, and it plays a key role in helping these models retrieve and re-rank relevant information. The retrieval-based model is used to find relevant information from existing information sources. The re-rank layer is used to rank the retrieved information based on its relevance to the input query. 
+
+ 
+
+### Generation Layer
+The generation layer is typically the last layer of a RAG model which consists of a foundation large language model that is trained on a massive data set of text and code. As the name suggests, the generation layer allows the model to generate new text in response to a user's query. The generative model takes the retrieved information, synthesises all the data and shapes it into a coherent and contextually appropriate response. This is essential for many tasks, such as question answering, summarisation machine translation and also generative search specifically RAG. In the context of search, this layer excels in providing context and natural language capabilities for generative search.
+

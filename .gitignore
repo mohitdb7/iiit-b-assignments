@@ -22,3 +22,4 @@ gen_ai - shopassist/Gemini/.ipynb_checkpoints/Gemini-shopAssist-checkpoint.ipynb
 gen_ai - shopassist/OpenAI/.ipynb_checkpoints/OpenAI-ShopAssist-checkpoint.ipynb
 gen_ai - shopassist/OpenAI/.ipynb_checkpoints/Untitled-checkpoint.ipynb
 gen_ai - shopassist/OpenAI/OpenAIKey.txt
+.DS_Store
