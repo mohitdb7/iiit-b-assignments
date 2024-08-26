@@ -26,3 +26,7 @@ gen_ai - shopassist/OpenAI/OpenAIKey.txt
 *.bin
 *.sqlite3
 .DS_Store
+rag - insurance helpmate/API/openai_key
+rag - insurance helpmate/API/gemini_key
+rag - insurance helpmate/.ipynb_checkpoints/RAG-insurance-helpmateAI-checkpoint.ipynb
+rag - insurance generative search/.ipynb_checkpoints/Generative Search - Gemini-checkpoint.ipynb
