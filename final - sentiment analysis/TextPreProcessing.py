@@ -15,7 +15,18 @@ import nltk
 import spacy
 nlp = spacy.load('en_core_web_sm',  disable=["parser", "ner"])
 
-# Preprocess text fields
+# Preprocesses a given text document.
+#   Args:
+#     document (str): The input text document.
+#   Returns:
+#     str: The preprocessed text document.
+#   This function performs the following preprocessing steps:
+#     1. **Lowercasing:** Converts all characters to lowercase.
+#     2. **Punctuation and Number Removal:** Removes punctuation marks and words containing numbers.
+#     3. **Tokenization:** Splits the text into individual words.
+#     4. **Stop Word Removal:** Removes common stop words (e.g., "the," "and," "of").
+#     5. **Short Word Removal:** Removes words with one or fewer characters.
+#     6. **Joining:** Joins the processed words back into a single string.
 def preprocess(document):
   # 1. Change the document to lower case
   document = document.lower()
@@ -32,29 +43,58 @@ def preprocess(document):
   # 5. Remove words with 0 or 1 letter
   words = [w for w in words if len(w) > 1]
 
-  # 6. join
+  # 6. Join the processed words back into a single string
   document = " ".join(words)
   return(document)
 
 
 
-# Applying Lemmatization
+# Lemmatizes a given text using spaCy.
+# Args:
+# text (str): The input text to be lemmatized.
+# Returns:
+# str: The lemmatized text.
 def lemmatize_text(text):
     sent = []
-    doc = nlp(text)
+    
+    # Process the text using spaCy's NLP pipeline
+    doc = nlp(text) 
     for token in doc:
+        # Append the lemma of each token to the sentence list
         sent.append(token.lemma_)
+    
+    # Join the lemmatized tokens into a single string and return the result
     return " ".join(sent)
 
 
-#function to collect the n-gram frequency of words
+
+# Gets the top N most frequent n-grams from a given corpus.
+# Args:
+#     corpus (list): A list of text documents.
+#     n_gram_range (int): The range of n-grams to consider.
+#     n (int, optional): The number of top n-grams to return. Defaults to None, which returns all n-grams.
+# Returns:
+#     list: A list of tuples, where each tuple contains an n-gram and its frequency.
 def get_top_n_ngram( corpus, n_gram_range ,n=None):
+    # Create a CountVectorizer to count the frequency of n-grams
     vec = CountVectorizer(ngram_range=(n_gram_range, n_gram_range), stop_words='english').fit(corpus)
+    
+    # Transform the corpus into a bag-of-words representation
     bag_of_words = vec.transform(corpus)
-    sum_words = bag_of_words.sum(axis=0) 
-    print("--1",sum_words)
+
+    # Sum the frequencies of each n-gram across all documents
+    sum_words = bag_of_words.sum(axis=0)    # --1: Calculate the sum of frequencies for each n-gram 
+    # print("--1",sum_words)
+
+    # Get the first word and its index to break the loop
     for word, idx in vec.vocabulary_.items():
         break
+
+    # Create a list of tuples, where each tuple contains an n-gram and its frequency
     words_freq = [(word, sum_words[0, idx]) for word, idx in vec.vocabulary_.items()]
+
+    # Sort the list of tuples by frequency in descending order
     words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
+
+    # Return the top N n-grams
     return words_freq[:n]
