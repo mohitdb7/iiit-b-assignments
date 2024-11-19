@@ -37,8 +37,88 @@ def preprocess(document):
   # 3. Tokenize the words
   words = word_tokenize(document)
 
+  negative_words = {
+        "no",
+        "not",
+        "none",
+        "neither",
+        "never",
+        "nobody",
+        "nothing",
+        "nowhere",
+        "doesn't",
+        "isn't",
+        "wasn't",
+        "shouldn't",
+        "won't",
+        "can't",
+        "couldn't",
+        "don't",
+        "haven't",
+        "hasn't",
+        "hadn't",
+        "aren't",
+        "weren't",
+        "wouldn't",
+        "daren't",
+        "needn't",
+        "didn't",
+        "without",
+        "against",
+        "negative",
+        "deny",
+        "reject",
+        "refuse",
+        "decline",
+        "unhappy",
+        "sad",
+        "miserable",
+        "hopeless",
+        "worthless",
+        "useless",
+        "futile",
+        "disagree",
+        "oppose",
+        "contrary",
+        "contradict",
+        "disapprove",
+        "dissatisfied",
+        "objection",
+        "unsatisfactory",
+        "unpleasant",
+        "regret",
+        "resent",
+        "lament",
+        "mourn",
+        "grieve",
+        "bemoan",
+        "despise",
+        "loathe",
+        "detract",
+        "abhor",
+        "dread",
+        "fear",
+        "worry",
+        "anxiety",
+        "sorrow",
+        "gloom",
+        "melancholy",
+        "dismay",
+        "disheartened",
+        "despair",
+        "dislike",
+        "aversion",
+        "antipathy",
+        "hate",
+        "disdain"
+    }
+
+  # 3. Tokenize the words
+  words = word_tokenize(document)
+
+  new_stop_set = stop_words = set(stopwords.words('english')) - set(negative_words)
   # 4. Remove the stop words
-  words = [word for word in words if word not in stopwords.words("english")]
+  words = [word for word in words if word not in new_stop_set]
 
   # 5. Remove words with 0 or 1 letter
   words = [w for w in words if len(w) > 1]

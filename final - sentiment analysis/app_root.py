@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import SentimentAnalysisBusinessLogic
+from ModelFactory import ModelFactory
 
 app = Flask(__name__)
 
